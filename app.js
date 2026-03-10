@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 // Example API route
 app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello, World!" });
+  res.json({ message: "Hello, World! changed" });
 });
 
 module.exports = app;
