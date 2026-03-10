@@ -1,0 +1,25 @@
+# render.yaml — Render auto-deploy configuration
+# Docs: https://render.com/docs/render-yaml-spec
+
+services:
+  - type: web
+    name: node-backend
+    runtime: node
+    region: oregon          # Change to: ohio, virginia, frankfurt, singapore
+    plan: free              # Change to: starter, standard, pro for paid plans
+    branch: main            # Auto-deploy triggers on push to this branch
+
+    buildCommand: npm install
+    startCommand: npm start
+
+    healthCheckPath: /health  # Render pings this to verify deploy success
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+
+    # Uncomment below to add a custom domain
+    # domains:
+    #   - yourdomain.com
