@@ -15,7 +15,7 @@ app.get("/health", (req, res) => {
 // Base route
 app.get("/", (req, res) => {
   res.json({
-    message: "Welcome to my Node.js API 🚀",
+    message: "Welcome again to my Node.js API 🚀",
     version: "1.0.0",
   });
 });
